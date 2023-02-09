@@ -34,6 +34,7 @@ type User = {
     name: string
     email: string
     isActive: boolean
+    credcardDetails?: number // ? => Será opcional
 }
 
 let myUser: User = {
@@ -45,5 +46,17 @@ let myUser: User = {
 
 myUser.email = "h@gmail.com" // Pode ser modificado
 // myUser._id = "asa" // READONLY não permite que seja modificado.
+
+type cardNumber = {
+    cardnumber: string
+}
+
+type cardDate = {
+    cardDate: string
+}
+
+type cardDetails = cardNumber & cardDate & {
+    cvv: number
+} // Adicionar o mais um tipo como "{cvv: number}" não é considerada uma boa prática. Porém a soma dos dois primeiros tipos é sim considerado uma boa prática.
 
 export {}

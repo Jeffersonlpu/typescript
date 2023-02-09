@@ -5,7 +5,10 @@
 //     isActive: true
 // }
 exports.__esModule = true;
-function createUser(user) {
-    return { name: "", email: "", isActive: true };
-}
-createUser({ name: "", email: "", isActive: true });
+var myUser = {
+    _id: "12345",
+    name: "j",
+    email: "h@h.com",
+    isActive: false
+};
+myUser.email = "h@gmail.com"; // Pode ser modificado

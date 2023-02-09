@@ -40,4 +40,6 @@ function handleError (errmsg: string): never{
 }
 // Não ficou tão claro! never - é mais enfático que o "void", transmitindo um erro?
 
+
+
 export {}
