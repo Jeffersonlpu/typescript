@@ -6,7 +6,7 @@ console.log(greetings);
 // number
 let userId = 334455.3; // Não há necessidade de colocar :number - O TS já reconhece e faz os apontamentos necessários como abaixo, sugerindo o .tofixe() e características apenas para números.
 
-userId.toFixed();
+userId.toFixed;
 
 
 // boolean
