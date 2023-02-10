@@ -44,10 +44,12 @@ const data3: (number | string) [] = [1, 2, "3"];
 
 // number [] | string [] => sem os parênteses, significa que o array será por inteiro de números ou será inteiro de string. Por isso daria erro.
 
-let pi: 3.14 = 3.14
+let pi:3.14 = 3.14
 // pi =3.145 // Não vai permitir, pois é uma definição literal
 
 let assentoAviao: "corredor" | "meio" | "janela"
 
 assentoAviao = "corredor"
 // assentoAviao = "cabine" // Não será aceito pois fugiu da definição literal.
+
+export {}

@@ -1,3 +1,5 @@
+"use strict";
+exports.__esModule = true;
 var score = 33;
 // Tentar deixar o mais estrito possível para evitar bugs. Poderiam ser adicionados outros tipos como: | boolean
 score = 44;
@@ -26,4 +28,3 @@ var pi = 3.14;
 // pi =3.145 // Não vai permitir, pois é uma definição literal
 var assentoAviao;
 assentoAviao = "corredor";
-// assentoAviao = "cabine" // Não será aceito pois fugiu da definição literal.
