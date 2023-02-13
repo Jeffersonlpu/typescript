@@ -26,7 +26,7 @@ const bianca = new User2("bi@gmail.com", "Bianca")
 
 class User3 {
 
-    private _courseCount = 1
+    protected _courseCount = 1
 
     readonly city: string = "Guará"
     constructor ( 
@@ -52,5 +52,14 @@ class User3 {
             throw new Error ("Course count should be more than 1")
         }
         this._courseCount = courseNum
+    }
+}
+
+class SubUser3 extends User3 {
+    // OBS: private não poderam ser extendidas a essa classe, pois não são acessíveis fora da função.
+    // Porém quando definido como protected, pode ser acessado em outra classe.
+    isFamily: boolean = true
+    changeCourseCount(){
+        this._courseCount = 4; // => foi acessado de outra classe, pois estava como protected.
     }
 }

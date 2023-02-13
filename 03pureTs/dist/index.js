@@ -43,3 +43,14 @@ class User3 {
         this._courseCount = courseNum;
     }
 }
+class SubUser3 extends User3 {
+    constructor() {
+        super(...arguments);
+        // OBS: private não poderam ser extendidas a essa classe, pois não são acessíveis fora da função.
+        // Porém quando definido como protected, pode ser acessado em outra classe.
+        this.isFamily = true;
+    }
+    changeCourseCount() {
+        this._courseCount = 4; // => foi acessado de outra classe, pois estava como protected.
+    }
+}
