@@ -20,3 +20,26 @@ class User2 {
 }
 const bianca = new User2("bi@gmail.com", "Bianca");
 // Pode ser construído dessa maneira: colocando PRIVATE or PUBLIC dentro do argumento. Sendo que não há necessidade de colocar "this.email" para acessar os argumentos. Porém ao verificar o código em JS, vemos que ele foi transcrito para o THIS.EMAIL ...
+class User3 {
+    constructor(email, name) {
+        this.email = email;
+        this.name = name;
+        this._courseCount = 1;
+        this.city = "Guará";
+    }
+    deleteToken() {
+        console.log("Token deleted");
+    }
+    get getAplleEmail() {
+        return `apple ${this.email}`;
+    }
+    get courseCount() {
+        return this._courseCount;
+    }
+    set courseCount(courseNum) {
+        if (courseNum <= 1) {
+            throw new Error("Course count should be more than 1");
+        }
+        this._courseCount = courseNum;
+    }
+}
